@@ -68,9 +68,12 @@
       }
 
       //copying data not available on this.containerContext()
-      context.ticket.id = this.ticket().id();
+//       context.ticket.id = this.ticket().id();
       context.ticket.description = this.ticket().description();
       context.ticket.external_id = this.ticket().external_id();
+      context.ticket.ext_id = this.ticket().external_id;
+      context.ticket.e_id = this.ticket().externalId();
+      console.log(context.ticket)
 
       context.current_user = this.decorateUser(this.findUserById(data.users, this.currentUser().id()));
 
